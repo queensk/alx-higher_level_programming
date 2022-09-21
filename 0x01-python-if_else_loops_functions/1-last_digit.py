@@ -7,7 +7,7 @@ if number < 0:
     last_digit = -last_digit    
 print(message.format(number, last_digit), end="")
 if last_digit > 5:
-    print ("greater thatn 5")
+    print("greater than 5")
 elif last_digit == 0:
     print("0")
 else:
