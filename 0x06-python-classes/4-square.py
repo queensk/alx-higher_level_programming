@@ -19,6 +19,20 @@ class Square:
 
     def area(self):
         """
+        Returns the area of the square
+        """
+        return (self.__size * self.__size)
+    
+    @property
+    def size(self):
+        """
+        size getter. Handle size errors
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
         size setter. Set the size square
         """
         if type(value) is not int:
