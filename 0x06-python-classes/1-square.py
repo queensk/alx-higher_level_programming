@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-""" Creates an empty class called Square
+"""
+Creates an empty class called Square
 """
 
 
 class Square:
-    """ Empty class with privet size attribute 
+    """
+    Empty class with privet size attribute
     """
     def __init__(self, size):
         """
