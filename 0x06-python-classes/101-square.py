@@ -9,7 +9,7 @@ class Square:
                Instantiation with size
         Args:
             size: size of the square
-            position: postion of the square
+            position: position of the square
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -34,7 +34,9 @@ class Square:
     @size.setter
     def size(self, value):
         """
-        size setter. Set the size square
+                size setter. Set the size square
+        Args:
+            value: value of size of square
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -65,7 +67,9 @@ class Square:
     @position.setter
     def position(self, value):
         """
-        Handle position with errors
+                Handle position with errors
+        Args:
+            value: tuple value of position of square
         """
         if type(value) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -81,6 +85,9 @@ class Square:
             self.__position = value
 
     def __str__(self):
+        """
+        print string format
+        """
         self.my_list = []
         if self.__size == 0:
             return ""
