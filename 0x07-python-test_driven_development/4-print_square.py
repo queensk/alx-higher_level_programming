@@ -10,7 +10,7 @@ def print_square(size):
     Args:
         size: Size of the square to print
 
-    Returns: 
+    Returns:
         No retune
 
     Raises:
@@ -20,10 +20,9 @@ def print_square(size):
 
     """
 
-    
     if not isinstance(size, int):
-        raise TypeError ("size must be an integer")
-    
+        raise TypeError("size must be an integer")
+
     if size < 0:
         raise ValueError("size must be >= 0")
 
