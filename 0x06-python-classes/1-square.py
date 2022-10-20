@@ -8,6 +8,7 @@ class Square:
     """
     Empty class with privet size attribute
     """
+
     def __init__(self, size):
         """
         size instantiation
