@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ Creates an empty class called Square
-"""
+"""                                     
 
 
 class Square:
     """ Empty class with size private attribute
     """
+
     def __init__(self, size=0):
         """
                 Instantiation with size
@@ -17,7 +18,7 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-            
+
     def area(self):
         """
         Returns the area of the square
@@ -30,6 +31,7 @@ class Square:
         size getter. Handle size errors
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """
