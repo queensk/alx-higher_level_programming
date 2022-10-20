@@ -4,7 +4,7 @@ A# 0x05. Python - Exceptions
 > Dealing with exceptions is an important part of programming. Sometimes errors happen because of bugs in your code. In those cases, good error messages will help you debug your code efficiently. 
 
 ``` 0. Safe list printing ```
-Write a function that prints x elements of a list.
+> Write a function that prints x elements of a list.
 - Prototype: ``` def safe_print_list(my_list=[], x=0): ```
 - my_list can contain any type (integer, string, etc.)
 - All elements must be printed on the same line followed by a new line.
@@ -66,3 +66,8 @@ Write a function that prints x elements of a list.
      	- print: out of range
 - You have to use try: / except: / finally:
 - You are not allowed to import any module 
+
+``` 5-raise_exception.py - Raise exception ```
+> Write a function that raises a type exception.
+- Prototype: ``` def raise_exception(): ```
+- You are not allowed to import any module
