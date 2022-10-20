@@ -6,6 +6,7 @@
 class Square:
     """ Empty class with size private attribute
     """
+
     def __init__(self, size=0, position=(0, 0)):
         """
                 Instantiation with size
@@ -19,20 +20,20 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
         self.position = position
-        
+
     def area(self):
         """
         size getter. Handle size errors
         """
         return (self.__size * self.__size)
-    
+
     @property
     def size(self):
         """
         size getter. Handle size errors
         """
         return self.__size
-        
+
     @size.setter
     def size(self, value):
         """
@@ -43,7 +44,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-        
+
     def my_print(self):
         """
         Print a square with the character # at position given
@@ -54,16 +55,16 @@ class Square:
         for j in range(self.__position[1]):
             print()
         for i in range(self.__size):
-            print(" "*self.__position[0], end="")
-            print("#"*self.__size)
-        
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
+
     @property
     def position(self):
         """
         position setter. Set the position of square
         """
         return self.__position
-        
+
     @position.setter
     def position(self, value):
         """
