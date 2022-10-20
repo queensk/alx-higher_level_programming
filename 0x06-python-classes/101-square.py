@@ -2,6 +2,7 @@
 """ Creates an empty class called Square
 """
 
+
 class Square:
     def __init__(self, size=0, position=(0, 0)):
         """
@@ -16,13 +17,13 @@ class Square:
             raise ValueError("size must be >= 0")
         self.size = size
         self.position = position
-    
+
     def area(self):
         """
         Returns the area of the square
         """
         return (self.__size * self.__size)
-        
+
     @property
     def size(self):
         """
@@ -40,7 +41,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-        
+
     def my_print(self):
         """
         Print a square with the character # at position given
@@ -53,14 +54,14 @@ class Square:
         for i in range(self.__size):
             print(" " * self.__position[0], end="")
             print("#" * self.__size)
-        
+
     @property
     def position(self):
         """
         position setter. Set the position of square
         """
         return self.__position
-        
+
     @position.setter
     def position(self, value):
         """
