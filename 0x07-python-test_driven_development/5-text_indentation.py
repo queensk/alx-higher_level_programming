@@ -6,7 +6,8 @@ Module composed by a function that prints 2 new lines after ".?:" characters
 
 def text_indentation(text):
     """
-    function that prints a text with 2 new lines after each of these characters: ., ? and :
+    function that prints a text with 2 new lines,
+    after each of these characters: ., ? and :
 
     Args:
         text: string input parameter
@@ -20,7 +21,7 @@ def text_indentation(text):
     """
 
     if not isinstance(text, str):
-        raise TypeError ("text must be a string")
+        raise TypeError("text must be a string")
 
     s = text[:]
 
