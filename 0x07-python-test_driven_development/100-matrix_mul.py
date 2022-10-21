@@ -42,8 +42,7 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_a can't be empty")
 
     if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
-        raise ValueError(
-            "if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):")
+        raise ValueError("m_b can't be empty")
 
     for lists in m_a:
         for element in lists:
