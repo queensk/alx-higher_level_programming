@@ -79,6 +79,13 @@ Passing an empty matrix
     	      ...
     ValueError: m_a can't be empty
 
+Passing an empty matrix 2
+
+    >>> matrix_mul([[1, 2]], [[]])
+    Traceback (most recent call last):
+    	      ...
+    ValueError: m_b can't be empty
+
 Passing a matrix with a list of strings
 
     >>> matrix_mul([[1, '1', 1], ['2', 2, '2']], [[3], [3]])
