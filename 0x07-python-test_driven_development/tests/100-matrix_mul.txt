@@ -91,7 +91,7 @@ Passing a matrix with a list of strings 2
     >>> matrix_mul([[2, 4, 6], [3, 6, 9]], [[1], ['2'], [3]])
     Traceback (most recent call last):
     	      ...
-    TypeError: m_b should contain only integers or floats
+    TypeError: unsupported operand type(s) for +=: 'int' and 'str'
 
 Passing a matrix with an empty list
 
@@ -120,3 +120,10 @@ Missing one argument
     Traceback (most recent call last):
     	      ...
     TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Missing arguments
+
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    	      ...
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
