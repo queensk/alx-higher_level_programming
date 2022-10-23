@@ -8,6 +8,7 @@ class Rectangle:
     """
     Class defining Rectangle objects.
     """
+
     def __init__(self, width=0, height=0):
         """
         Method to initialize Rectangle class.
@@ -67,7 +68,7 @@ class Rectangle:
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        
+
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
