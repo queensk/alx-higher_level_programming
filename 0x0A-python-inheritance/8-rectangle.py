@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
     Methods:
         __inti__ - initialise the Rectangle.
     """
-    def __int__(self, width, height):
+    def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
