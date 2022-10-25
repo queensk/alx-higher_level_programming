@@ -19,7 +19,7 @@ class MyInt(int):
         Rebel to the not Equal Operator.
         """
         return (self.number == value)
-    
+
     def __eq__(self, value):
         """
         Rebel to the Equal to Operator.
