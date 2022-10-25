@@ -30,11 +30,11 @@ Printing a sorted list 2 (repeated numbers)
     [1, 1, 2, 2, 2]
 
 
-Printing an sorted list 3 (one number)
+Printing an sorted list 10 (one number)
     >>> my_list = MyList()
     >>> my_list.append(10)
     >>> my_list.print_sorted()
-    [3]
+    [10]
 
 
 Printing an sorted list 4 (positive and negative numbers)
