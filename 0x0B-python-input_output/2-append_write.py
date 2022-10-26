@@ -16,5 +16,5 @@ def append_write(filename="", text=""):
     Raise:
         exemption when file can't be opened.
     """
-    with open(filename, 'a', text) as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         return f.write(text)
