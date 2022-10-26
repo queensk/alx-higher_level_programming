@@ -5,7 +5,7 @@ Module with functions that return a JSON string:
 import json
 
 
-def from_json_string(my_str):
+def to_json_string(my_obj):
     """
     A function that returns an object (Python data structure)
     represented by a JSON string
@@ -14,4 +14,4 @@ def from_json_string(my_str):
     Returns:
         an object (Python data structure) represented by a JSON string.
     """
-    return json.dumps(my_str)
+    return json.dumps(my_obj)
