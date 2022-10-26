@@ -19,18 +19,19 @@ class Student:
         Args:
             attrs: attributes to get from dictionary.
         """
+        attrs_dict = self.__dict__.copy()
         if type(attrs) is list:
-            attrs_dict = self.__dict__.copy()
-            for items in attrs_dict:
+
+            for items in attrs:
                 if type(items) is not str:
-                    return items
+                    return attrs_dict
 
             d_list = {}
 
             for item in range(len(attrs)):
-                for satt in items:
+                for satt in attrs_dict:
                     if attrs[item] == satt:
-                        d_list[satt] = items[satt]
+                        d_list[satt] = attrs_dict[satt]
             return d_list
 
-        return items
+        return attrs_dict
