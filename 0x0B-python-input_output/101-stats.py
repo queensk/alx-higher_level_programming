@@ -1,8 +1,14 @@
 #!/usr/bin/python3
+"""
+A script that reads stdin line by line and computes metrics
+"""
 import sys
 
 
 def print_info():
+    """
+    Prints Total file size: File size: <total size>
+    """
     print('File size: {:d}'.format(file_size))
 
     for scode, code_times in sorted(status_codes.items()):
