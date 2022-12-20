@@ -1,4 +1,6 @@
 #!/usr/bin/node
+
+// Increment the value of an object
 const myObject = {
   type: 'object',
   value: 12,
