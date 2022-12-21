@@ -12,4 +12,4 @@ const dataFileOne = fs.readFileSync(filePathOne, 'utf8');
 const dataFileTwo = fs.readFileSync(filePathTwo, 'utf8');
 const concatData = dataFileOne + dataFileTwo;
 
-fs.writeFileSync(destPath, data);
+fs.writeFileSync(destination, concatData);
