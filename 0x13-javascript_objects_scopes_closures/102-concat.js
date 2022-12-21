@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/node
 
 const fs = require('fs');
 
@@ -10,6 +10,6 @@ const destination = process.argv[4];
 // read content of the files
 const dataFileOne = fs.readFileSync(filePathOne, 'utf8');
 const dataFileTwo = fs.readFileSync(filePathTwo, 'utf8');
-const concatData = dataFileOne + dataFileTwo;
+const concatData = [dataFileOne, dataFileTwo].join('\n');
 
 fs.writeFileSync(destination, concatData);
