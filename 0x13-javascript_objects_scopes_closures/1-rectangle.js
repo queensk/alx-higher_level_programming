@@ -4,6 +4,6 @@
 module.exports = class Rectangle {
   constructor (w, h) {
     this.width = w;
-    this.hight = h;
+    this.height = h;
   }
 };
