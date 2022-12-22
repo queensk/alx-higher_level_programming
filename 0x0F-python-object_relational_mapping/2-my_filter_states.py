@@ -31,6 +31,3 @@ if __name__ == '__main__':
 
     for row in cursor.fetchall():
         print(row)
-
-    cursor.close()
-    conn.close()
