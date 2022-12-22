@@ -24,8 +24,9 @@ if __name__ == '__main__':
     )
 
     cursor = conn.cursor()
-    query = f'SELECT * FROM states\
-        WHERE name = "{search_state}" ORDER BY id ASC'
+    query = f'SELECT * FROM states \
+            WHERE name = "{search_state}" \
+            ORDER BY id ASC'
     cursor.execute(query)
 
     for row in cursor.fetchall():
