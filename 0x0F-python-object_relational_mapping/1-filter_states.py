@@ -20,7 +20,7 @@ if __name__ == '__main__':
         port=3306,
         user=mySql_username,
         password=mySql_password,
-        db=database_name
+        db=database_name,
     )
 
     cursor = conn.cursor()
