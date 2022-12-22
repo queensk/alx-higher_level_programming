@@ -10,25 +10,19 @@ if __name__ == '__main__':
     """
     access the database and update state
     """
-    mySql_username = argv[1]
-    mySql_password = argv[2]
-    database_name = argv[3]
-    search_state = argv[4]
 
     db = MySQLdb.connect(
         host='localhost',
         port=3306,
-        user=mySql_username,
-        passwd=mySql_password,
-        db=database_name
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3]
     )
 
     cursor = db.cursor()
-    query = 'SELECT * FROM states \
+    cursor.execute('SELECT * FROM states \
             WHERE name = "{}" \
-            ORDER BY id ASC'.format(search_state)
-
-    cursor.execute(query)
+            ORDER BY id ASC'.format(argv[4]))
 
     for row in cursor.fetchall():
         print(row)
