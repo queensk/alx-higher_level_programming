@@ -3,23 +3,31 @@
 lists all states from the database hbtn_0e_0_usa
 """
 
+import sys
 import MySQLdb
-from sys import argv
 
 if __name__ == '__main__':
     """
-    Access to the database and get the states
-    from the database.
+    access the database and update state
     """
+    mySql_username = sys.argv[1]
+    mySql_password = sys.argv[2]
+    database_name = sys.argv[3]
+    search_state = sys.argv[4]
 
-    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
-                         passwd=argv[2], db=argv[3])
+    conn = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=mySql_username,
+        passwd=mySql_password,
+        db=database_name,
+    )
 
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states \
-                 WHERE name LIKE BINARY '{}' \
-                 ORDER BY states.id ASC".format(argv[4]))
-    rows = cur.fetchall()
+    cursor = conn.cursor()
+    query = 'SELECT * FROM states \
+            WHERE name = "{}" \
+            ORDER BY id ASC'.format(search_state)
+    cursor.execute(query)
 
-    for row in rows:
+    for row in cursor.fetchall():
         print(row)
