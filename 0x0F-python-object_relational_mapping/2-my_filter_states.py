@@ -3,17 +3,17 @@
 lists all states from the database hbtn_0e_0_usa
 """
 
-import sys
+from sys import argv
 import MySQLdb
 
 if __name__ == '__main__':
     """
     access the database and update state
     """
-    mySql_username = sys.argv[1]
-    mySql_password = sys.argv[2]
-    database_name = sys.argv[3]
-    search_state = sys.argv[4]
+    mySql_username = argv[1]
+    mySql_password = argv[2]
+    database_name = argv[3]
+    search_state = argv[4]
 
     conn = MySQLdb.connect(
         host='localhost',
