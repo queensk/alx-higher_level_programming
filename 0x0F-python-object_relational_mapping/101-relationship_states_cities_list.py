@@ -12,14 +12,15 @@ from relationship_city import City
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                        format(argv[1], argv[2], argv[3]),
-                        pool_pre_ping=True)
+                           format(argv[1], argv[2], argv[3]),
+                           pool_pre_ping=True)
     Base.metadata.crate_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state_city = session.query(State).outerjoin(City).order_by(State.id, City.id).all()
+    state_city = session.query(State).outerjoin(
+        City).order_by(State.id, City.id).all()
 
     for state in state_city:
         print("{}: {}".format(state.id, state.name))
@@ -27,4 +28,3 @@ if __name__ == "__main__":
             print("    {}: {}".format(city.id, city.name))
 
     session.close()
-    
